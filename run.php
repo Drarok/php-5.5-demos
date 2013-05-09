@@ -14,7 +14,12 @@ Example\Autoloader::register();
 $commands = array_slice($_SERVER['argv'], 1);
 
 if (! $commands) {
-	echo 'Please pass in some example names to run.', PHP_EOL;
+	echo 'Please pass in one or more example names to run:', PHP_EOL;
+
+	foreach (glob(__DIR__ . '/Example/Examples/*.php') as $fileName) {
+		echo ' * ', basename($fileName, '.php'), PHP_EOL;
+	}
+
 	exit(1);
 }
 

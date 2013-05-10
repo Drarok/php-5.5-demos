@@ -45,6 +45,7 @@ if (count($requestedExamples) == 1
 }
 
 foreach ($requestedExamples as $example) {
+	echo 'Running ', $example, PHP_EOL;
 	$className = 'Example\\Examples\\' . $example;
 	$instance = new $className();
 	$instance->run();

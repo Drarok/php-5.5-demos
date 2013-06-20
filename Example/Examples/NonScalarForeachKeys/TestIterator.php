@@ -35,6 +35,11 @@ class TestIterator implements \Iterator
 	 */
 	protected $_key = 0;
 
+	public function __construct()
+	{
+		$this->_nonScalarKeys[] = new IterableValue();
+	}
+
 	/**
 	 * Return the current value.
 	 *

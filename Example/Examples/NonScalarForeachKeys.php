@@ -33,7 +33,7 @@ You can run this example under PHP 5.3 or 5.4 to compare.
 
 EOT;
 		foreach (new NonScalarForeachKeys\TestIterator() as $key => $value) {
-			echo $key, ' => ', $value, PHP_EOL;
+			echo $key, ' => (', gettype($value), ') ', $value, PHP_EOL;
 		}
 	}
 }

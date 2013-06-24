@@ -23,6 +23,7 @@ class TestIterator implements \IteratorAggregate
 		$data = ['this', 'is', 'a', 'test'];
 
 		foreach ($data as $key => $value) {
+			$key += 1.5;
 			echo 'Iterator yielding key: ', $key, PHP_EOL;
 			yield $key => $value;
 		}

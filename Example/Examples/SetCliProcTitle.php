@@ -29,8 +29,7 @@ class SetCliProcTitle extends Base
 Under PHP 5.5 and later, you can set the process title under the CLI SAPI, without
 the need for any extensions (such as proctitle, required under PHP <= 5.4).
 
-cli_set_process_title(string $title) and cli_get_process_title(void) were added,
-but at present are missing from the documentation.
+cli_set_process_title(string $title) and cli_get_process_title(void) were added for PHP 5.5.
 
 EOT;
 
